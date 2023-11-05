@@ -1,7 +1,22 @@
 import { Link } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import logo from '../../assets/img/book-management.png'
+import { AuthContext } from '../Provider/AuthProvider';
+import { useContext } from 'react';
+import toast from 'react-hot-toast';
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                toast.success('Log Out successfully!');
+            })
+            .catch(() => {
+                toast.error("Something wrong. Please Try again")
+            })
+
+    }
 
     //Home, Add Book, All Books, Borrowed Books, and Login
     const navLinks = <>
@@ -31,7 +46,19 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">Login</Link>
+
+                    {
+                        user && <div><img className="mr-3 border-[3px] border-white w-[40px] rounded-full" src={user.photoURL} alt="" /></div>
+                    }
+                    {
+                        user ? <div>
+                            <span className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold mr-3">{user.displayName}</span>
+                            <button onClick={handleLogOut} className="btn btn-sm bg-[#403F3F] text-white hover:bg-slate-600">LogOut</button>
+                        </div>
+
+                            : <Link to='/login'><button className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">Login</button></Link>
+                    }
+                    {/* <Link to='/login' className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">Login</Link> */}
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ const AfterBanner = () => {
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Free Standard Delivery</h2>
-                                <p className="text-sm text-gray-400">Get items delivered at no extra cost with our standard service.</p>
+                                <p className="text-sm text-gray-400 mt-3">Get items delivered at no extra cost with our standard service.</p>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ const AfterBanner = () => {
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Free Easy Returns</h2>
-                                <p className="text-sm text-gray-400">Hassle-free returns at no cost for your convenience and satisfaction.</p>
+                                <p className="text-sm text-gray-400 mt-3">Hassle-free returns at no cost for your convenience and satisfaction.</p>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const AfterBanner = () => {
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Enough Books Available</h2>
-                                <p className="text-sm text-gray-400">Abundant books in stock for all your reading desires.</p>
+                                <p className="text-sm text-gray-400 mt-3">Abundant books in stock for all your reading desires.</p>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const AfterBanner = () => {
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Special Discounts</h2>
-                                <p className="text-sm text-gray-400"> Special discounts to enhance your shopping experience.</p>
+                                <p className="text-sm text-gray-400 mt-3"> Special discounts to enhance your shopping experience.</p>
                             </div>
                         </div>
                     </div>

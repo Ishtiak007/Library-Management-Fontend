@@ -11,7 +11,8 @@ const Category = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-center my-5 text-2xl font-bold">Categories {category.length}</h1>
+            <h1 className="text-center mt-5 text-2xl font-bold">Categories</h1>
+            <h2 className="text-center text-3xl"> . . . . . . . . </h2>
             <div className="lg:flex justify-center">
                 <div className="grid lg:grid-cols-3 grid-cols-1 justify-center gap-5">
                     {
