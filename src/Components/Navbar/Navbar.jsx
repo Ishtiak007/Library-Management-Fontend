@@ -11,8 +11,8 @@ const Navbar = () => {
     const navLinks = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         <li className='font-semibold'><Link to='/addBook'>Add Book</Link></li>
-        <li className='font-semibold'><Link>All Books</Link></li>
-        <li className='font-semibold'><Link>Borrowed Books</Link></li>
+        <li className='font-semibold'><Link to='/allBook'>All Books</Link></li>
+        <li className='font-semibold'><Link to='/borrowedBook'>Borrowed Books</Link></li>
 
     </>
 

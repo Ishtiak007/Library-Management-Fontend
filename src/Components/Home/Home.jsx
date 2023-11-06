@@ -3,6 +3,8 @@ import Banner from "../Banner/Banner";
 import BookListLink from "../BookListLink/BookListLink";
 import Category from "../Category/Category";
 import FindFavouriteBook from "../FindFavouriteBook/FindFavouriteBook";
+import MarqueeSlider from "../MarqueeSlider/MarqueeSlider";
+import RegisterLink from "../RegisterLink/RegisterLink";
 import Testimonial from "../Testimonial/Testimonial";
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
             <Category></Category>
             <BookListLink></BookListLink>
             <Testimonial></Testimonial>
+            <RegisterLink></RegisterLink>
+            <MarqueeSlider></MarqueeSlider>
         </div>
     );
 };
