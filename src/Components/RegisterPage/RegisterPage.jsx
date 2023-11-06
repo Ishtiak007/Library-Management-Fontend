@@ -43,7 +43,7 @@ const RegisterPage = () => {
             })
     }
     return (
-        <div className="hero min-h-screen bg-gradient-to-r from-purple-100 to-pink-100">
+        <div className="hero min-h-screen bg-gradient-to-r from-purple-50 to-pink-50">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2">
                     <img src={img} alt="" />
@@ -51,7 +51,7 @@ const RegisterPage = () => {
                 <div className="card  bg-base-100 lg:w-1/2">
                     <form onSubmit={handleRegister} className='p-5'>
                         <div>
-                            <p className="py-4 text-center text-xl font-semibold">Register page</p>
+                            <p className="py-4 text-center text-xl font-semibold text-blue-900">Register page</p>
                         </div>
                         <div className="form-control">
                             <label className="label">

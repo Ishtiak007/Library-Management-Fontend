@@ -56,7 +56,7 @@ const LoginPage = () => {
             })
     }
     return (
-        <div className="hero min-h-screen bg-gradient-to-r from-cyan-100 to-blue-100">
+        <div className="hero min-h-screen bg-gradient-to-r from-gray-100 to-cyan-50">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2">
                     <img src={img} alt="" />
@@ -64,7 +64,7 @@ const LoginPage = () => {
                 <div className="card  bg-base-100 lg:w-1/2">
                     <form onSubmit={handleLogin} className='p-5'>
                         <div>
-                            <p className="py-4 text-center text-xl font-semibold">Login Here</p>
+                            <p className="py-4 text-center text-xl font-semibold text-blue-900">Login Here</p>
                         </div>
                         <div className="form-control">
                             <label className="label">

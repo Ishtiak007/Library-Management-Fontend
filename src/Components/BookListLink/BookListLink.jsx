@@ -9,7 +9,7 @@ const BookListLink = () => {
                 <div>
                     <h1 className='text-3xl font-bold'>Explore To See Our Book Lists</h1>
                     <p className='my-3 text-lg text-gray-500'>Access our comprehensive library of books with a single click, your gateway to a world of knowledge and entertainment.</p>
-                    <Link to='/allBook'><button className="flex gap-2 items-center bg-gradient-to-r from-purple-500 to-pink-500  rounded-3xl px-3 py-2 text-white font-medium">Explore Now <FaArrowRight></FaArrowRight></button></Link>
+                    <Link to='/allBook'><button className="flex gap-2 items-center bg-gradient-to-r from-purple-500 to-pink-500  rounded-3xl px-3 py-2 text-white font-medium">Explore All Book <FaArrowRight></FaArrowRight></button></Link>
                 </div>
             </div>
             <div className="flex-1 flex justify-center items-center">

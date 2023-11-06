@@ -12,7 +12,7 @@ const FilteredCategories = ({ data }) => {
                 <div className="card-body items-center text-center">
                     <h2 className="text-xl font-medium">Category : <span className="bg-gray-100 rounded-3xl px-[8px] py-[2px] text-blue-900">{category}</span></h2>
                     <div className="card-actions mt-3">
-                        <Link><button className="flex gap-2 items-center bg-slate-200 rounded-3xl px-3 py-2 text-blue-900 font-medium">Explore More <FaArrowRight></FaArrowRight></button></Link>
+                        <Link to={`/totalAllBooks/${category}`}><button className="flex gap-2 items-center bg-slate-200 rounded-3xl px-3 py-2 text-blue-900 font-medium">Explore More <FaArrowRight></FaArrowRight></button></Link>
                     </div>
                 </div>
             </div>

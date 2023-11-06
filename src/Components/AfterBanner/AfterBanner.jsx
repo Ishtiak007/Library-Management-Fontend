@@ -7,7 +7,7 @@ const AfterBanner = () => {
                     <div>
                         <div className="card w-48 bg-base-100 shadow-xl  h-60 mt-4">
                             <figure className="px-5 pt-5">
-                                <FaCarSide className="text-7xl text-orange-500"></FaCarSide>
+                                <FaCarSide className="text-7xl text-sky-300"></FaCarSide>
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Free Standard Delivery</h2>
@@ -18,7 +18,7 @@ const AfterBanner = () => {
                     <div>
                         <div className="card w-48 bg-base-100 shadow-xl h-60 mt-4">
                             <figure className="px-5 pt-5">
-                                <FaRetweet className="text-7xl text-orange-500"></FaRetweet>
+                                <FaRetweet className="text-7xl text-sky-300"></FaRetweet>
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Free Easy Returns</h2>
@@ -29,7 +29,7 @@ const AfterBanner = () => {
                     <div>
                         <div className="card w-48 bg-base-100 shadow-xl h-60 mt-4">
                             <figure className="px-5 pt-5">
-                                <FaBookOpen className="text-7xl text-orange-500"></FaBookOpen>
+                                <FaBookOpen className="text-7xl text-sky-300"></FaBookOpen>
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Enough Books Available</h2>
@@ -40,7 +40,7 @@ const AfterBanner = () => {
                     <div>
                         <div className="card w-48 bg-base-100 shadow-xl h-60 mt-4">
                             <figure className="px-5 pt-5">
-                                <FaHandHoldingHeart className="text-7xl text-orange-500"></FaHandHoldingHeart>
+                                <FaHandHoldingHeart className="text-7xl text-sky-300"></FaHandHoldingHeart>
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">Special Discounts</h2>
@@ -51,7 +51,7 @@ const AfterBanner = () => {
                     <div>
                         <div className="card w-48 bg-base-100 shadow-xl h-60 mt-4">
                             <figure className="px-5 pt-5">
-                                <FaFilePdf className="text-7xl text-orange-500"></FaFilePdf>
+                                <FaFilePdf className="text-7xl text-sky-300"></FaFilePdf>
                             </figure>
                             <div className="p-4">
                                 <h2 className="text-lg font-medium text-gray-600">PDF Download</h2>

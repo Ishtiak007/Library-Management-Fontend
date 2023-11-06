@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import MarqueeSlider from "../MarqueeSlider/MarqueeSlider";
 
 const AddBook = () => {
@@ -11,8 +12,30 @@ const AddBook = () => {
         const category = form.category.value;
         const rating = form.rating.value;
         const description = form.description.value;
+        const newBook = { image, bookName, quantity, author, category, rating, description }
 
-        console.log(image, bookName, quantity, author, category, rating, description)
+
+        // sending data of book from here
+        fetch('http://localhost:5000/allBooks', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newBook)
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Your Book Added successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
     return (
         <div>
@@ -20,7 +43,7 @@ const AddBook = () => {
                 className='bg-[image:var(--image-url)] relative overflow-hidden rounded-b-md bg-no-repeat text-center h-[200px] lg:h-[600px] bg-cover rounded-lg'>
                 <div className="absolute bottom-0 left-0 right-0 top-0  overflow-hidden bg-fixed bg-[#3a3a3ac4]">
                     <div className="w-full h-full flex justify-center items-center">
-                        <h1 className="text-white text-4xl font-semibold font-serif">Add Book</h1>
+                        <h1 className="text-white text-4xl font-semibold font-serif">Add Book Route</h1>
                     </div>
                 </div>
             </div>
@@ -62,7 +85,7 @@ const AddBook = () => {
 
                             <label>
                                 <select name="category" className="form-control w-full py-3 px-4 rounded-md outline-1 outline-black">
-                                    <option value="Nobel">Nobel</option>
+                                    <option value="Novel">Novel</option>
                                     <option value="Thriller">Thriller</option>
                                     <option value="History">History</option>
                                     <option value="Drama">Drama</option>
