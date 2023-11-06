@@ -11,6 +11,9 @@ import Home from './Components/Home/Home.jsx';
 import LoginPage from './Components/LoginPage/LoginPage.jsx';
 import RegisterPage from './Components/RegisterPage/RegisterPage.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
+import AddBook from './Components/AddBook/AddBook.jsx';
+import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes.jsx';
+import Category from './Components/Category/Category.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,8 +25,16 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: '/addBook',
+        element: <PrivateRoutes><AddBook></AddBook></PrivateRoutes>
+      },
+      {
         path: '/login',
         element: <LoginPage></LoginPage>
+      },
+      {
+        path: '/category',
+        element: <Category></Category>
       },
       {
         path: '/register',

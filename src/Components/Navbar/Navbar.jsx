@@ -7,6 +7,15 @@ import toast from 'react-hot-toast';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
+
+    const navLinks = <>
+        <li className='font-semibold'><Link to='/'>Home</Link></li>
+        <li className='font-semibold'><Link to='/addBook'>Add Book</Link></li>
+        <li className='font-semibold'><Link>All Books</Link></li>
+        <li className='font-semibold'><Link>Borrowed Books</Link></li>
+
+    </>
+
     const handleLogOut = () => {
         logOut()
             .then(() => {
@@ -19,13 +28,7 @@ const Navbar = () => {
     }
 
     //Home, Add Book, All Books, Borrowed Books, and Login
-    const navLinks = <>
-        <li className='font-semibold'><Link>Home</Link></li>
-        <li className='font-semibold'><Link>Add Book</Link></li>
-        <li className='font-semibold'><Link>All Books</Link></li>
-        <li className='font-semibold'><Link>Borrowed Books</Link></li>
 
-    </>
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -52,13 +55,12 @@ const Navbar = () => {
                     }
                     {
                         user ? <div>
-                            <span className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold mr-3">{user.displayName}</span>
-                            <button onClick={handleLogOut} className="btn btn-sm bg-[#403F3F] text-white hover:bg-slate-600">LogOut</button>
+                            <span className="bg-gray-100 p-[2px] rounded-md mr-3">{user.displayName}</span>
+                            <button onClick={handleLogOut} className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">LogOut</button>
                         </div>
 
                             : <Link to='/login'><button className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">Login</button></Link>
                     }
-                    {/* <Link to='/login' className="bg-slate-600 rounded-3xl py-1 px-3 text-white font-semibold">Login</Link> */}
                 </div>
             </div>
         </div>
