@@ -5,7 +5,7 @@ const AboutUs = () => {
             <div className="bg-gray-100 p-4 rounded-md">
                 <FaLocationArrow className="text-4xl text-sky-400"></FaLocationArrow>
                 <h1 className="text-2xl font-bold my-3">Address</h1>
-                <p className="text-gray-500">Dhap, Lalkuthi, Rangpur</p>
+                <p className="text-gray-500">Dhap, Lalkuthi, Kotkipara, Rangpur</p>
                 <p className="text-gray-500">Road : 001</p>
                 <p className="text-gray-500">Building : #1232</p>
             </div>
