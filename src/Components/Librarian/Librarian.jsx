@@ -4,7 +4,7 @@ const Librarian = () => {
             <div className="hero min-h-screen bg-base-200 rounded-md">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className='lg:w-1/2 relative'>
-                        <img src='https://i.ibb.co/VHNhTqt/shiromani-kant-Hqbkgga0r-NQ-unsplash-1.jpg' className="lg:w-3/4 w-1/2 rounded-lg shadow-2xl" />
+                        <img src='https://i.ibb.co/VHNhTqt/shiromani-kant-Hqbkgga0r-NQ-unsplash-1.jpg' className="lg:w-3/4 w-1/2 rounded-lg shadow-2xl border-8  border-white" />
                         <img src='https://i.ibb.co/R4HDFWt/ahmed-almakhzanji-kshk-B1i5-5o-unsplash.jpg' className='lg:w-1/2 w-1/2 absolute right-5 top-1/2 border-8  border-white rounded-lg shadow-2xl' alt="" />
                     </div>
                     <div className='lg:w-1/2 space-y-5 p-4 mt-10'>

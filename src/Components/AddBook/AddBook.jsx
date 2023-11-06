@@ -88,7 +88,7 @@ const AddBook = () => {
                         </div>
                     </div>
                     <div className="text-center">
-                        <input className="px-10 py-2 rounded-3xl cursor-pointer mx-auto bg-gradient-to-r from-green-500 to-green-700 font-bold text-white" type="submit" value="Add Book" />
+                        <input className="px-10 py-2 rounded-3xl cursor-pointer mx-auto bg-gradient-to-r from-violet-500 to-fuchsia-500 font-bold text-white" type="submit" value="Add Book" />
                     </div>
                 </form>
             </div>
