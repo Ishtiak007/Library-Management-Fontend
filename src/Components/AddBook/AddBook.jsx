@@ -1,3 +1,5 @@
+import MarqueeSlider from "../MarqueeSlider/MarqueeSlider";
+
 const AddBook = () => {
     const handleAddBook = e => {
         e.preventDefault();
@@ -15,7 +17,7 @@ const AddBook = () => {
     return (
         <div>
             <div style={{ '--image-url': 'url(https://i.ibb.co/HpPhHr8/shiromani-kant-t-HKl-Db5-Ez-N4-unsplash-1.jpg)' }}
-                className='bg-[image:var(--image-url)] relative overflow-hidden rounded-b-md bg-no-repeat text-center h-[200px] lg:h-[600px] bg-cover'>
+                className='bg-[image:var(--image-url)] relative overflow-hidden rounded-b-md bg-no-repeat text-center h-[200px] lg:h-[600px] bg-cover rounded-lg'>
                 <div className="absolute bottom-0 left-0 right-0 top-0  overflow-hidden bg-fixed bg-[#3a3a3ac4]">
                     <div className="w-full h-full flex justify-center items-center">
                         <h1 className="text-white text-4xl font-semibold font-serif">Add Book</h1>
@@ -89,6 +91,9 @@ const AddBook = () => {
                         <input className="px-10 py-2 rounded-3xl cursor-pointer mx-auto bg-gradient-to-r from-green-500 to-green-700 font-bold text-white" type="submit" value="Add Book" />
                     </div>
                 </form>
+            </div>
+            <div>
+                <MarqueeSlider></MarqueeSlider>
             </div>
         </div>
     );
