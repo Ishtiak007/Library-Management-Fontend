@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const BooksCard = ({ data }) => {
-    const { image, bookName, author, category } = data;
+    const { _id, image, bookName, author, category } = data;
     return (
         <div>
             <div className="card lg:card-side lg:w-[600px] bg-base-100 shadow-xl mt-5">
@@ -24,7 +24,7 @@ const BooksCard = ({ data }) => {
                             <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                         </div>
                         <div className="card-actions mt-4">
-                            <Link><button className="flex gap-2 items-center bg-slate-200 rounded-3xl px-3 py-2 text-blue-900 font-medium">Details <FaArrowRight></FaArrowRight></button></Link>
+                            <Link to={`/bookDetails/${_id}`}><button className="flex gap-2 items-center bg-slate-200 rounded-3xl px-3 py-2 text-blue-900 font-medium">Details <FaArrowRight></FaArrowRight></button></Link>
                         </div>
                     </div>
                 </div>

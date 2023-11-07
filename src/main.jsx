@@ -17,6 +17,8 @@ import Category from './Components/Category/Category.jsx';
 import AllBook from './Components/AllBook/AllBook.jsx';
 import BorrowedBook from './Components/BorrowedBook/BorrowedBook.jsx';
 import TotalAllBooks from './Components/TotalAllBooks/TotalAllBooks.jsx';
+import BookDetails from './Components/AddBook/BookDetails.jsx';
+import AboutUs from './Components/AboutUs/AboutUs.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,9 +55,18 @@ const router = createBrowserRouter([
         element: <RegisterPage></RegisterPage>
       },
       {
+        path: '/aboutUs',
+        element: <AboutUs></AboutUs>
+      },
+      {
         path: '/totalAllBooks/:category',
         element: <PrivateRoutes><TotalAllBooks></TotalAllBooks></PrivateRoutes>,
         loader: () => fetch('http://localhost:5000/allBooks')
+      },
+      {
+        path: '/bookDetails/:id',
+        element: <BookDetails></BookDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
       }
     ]
   },

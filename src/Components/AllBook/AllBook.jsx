@@ -15,6 +15,9 @@ const AllBook = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-center my-5 bg-slate-200 p-4 rounded-md">
+                <button className="bg-blue-500 text-white font-medium rounded-2xl px-10 py-2">Available Books</button>
+            </div>
             <div className="flex justify-evenly flex-wrap my-4">
                 {
                     allBooks.map(books => <AllBookPage key={books._is} books={books}></AllBookPage>)
