@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AllBookPage = ({ books }) => {
 
-    const { image, bookName, author, category } = books;
+    const { _id, image, bookName, author, category } = books;
     return (
         <div>
             <div className="card lg:card-side lg:w-[600px] bg-base-100 shadow-xl mt-5">
@@ -27,7 +27,7 @@ const AllBookPage = ({ books }) => {
                             <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
                         </div>
                         <div className="card-actions mt-4">
-                            <Link><button className="flex gap-2 items-center bg-sky-100 rounded-3xl px-3 py-2 text-blue-900 font-medium hover:bg-gray-300">Update <FaArrowRight></FaArrowRight></button></Link>
+                            <Link to={`/updateBook/${_id}`}><button className="flex gap-2 items-center bg-sky-100 rounded-3xl px-3 py-2 text-blue-900 font-medium hover:bg-gray-300">Update <FaArrowRight></FaArrowRight></button></Link>
                         </div>
                     </div>
                 </div>

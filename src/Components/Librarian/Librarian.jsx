@@ -14,7 +14,7 @@ const Librarian = () => {
 
                         <p>Library maintainers oversee resources, ensuring organization, accessibility, and user satisfaction.</p>
                         <div className="flex items-center gap-4 mt-3">
-                            <div><img className="w-[70px] border-[3px] border-green-500 rounded-full" src="https://i.ibb.co/sRXWn6X/2222.png" alt="" /></div>
+                            <div><img className="w-[70px] border-[3px] border-white rounded-full" src="https://i.ibb.co/sRXWn6X/2222.png" alt="" /></div>
                             <div>
                                 <h2 className="font-semibold text-lg">Ishtiak Ahmed</h2>
                                 <p className="font-semibold text-gray-400">Whose contribution is behind everything</p>

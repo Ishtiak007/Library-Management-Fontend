@@ -13,9 +13,34 @@ const BookDetails = () => {
                         <img src={image} className="lg:w-2/3 rounded-md" alt="" />
                     </div>
                     <div>
-                        <div className="text-center my-4"><button className="bg-green-700 hover:bg-green-800 btn w-3/4 px-3 py-2 rounded-3xl text-white">Want To Read</button></div>
+                        <div className="text-center my-4">
+                            <button className="bg-green-700 hover:bg-green-800 btn w-3/4 px-3 py-2 rounded-3xl text-white">Want To Read</button>
+                        </div>
+
                         <div className="text-center">
-                            <button className="w-3/4 px-3 py-2 rounded-3xl text-gray-600 btn border-t-green-600 border-b-green-600 border-r-green-600 border-l-green-600">Want To Borrow</button>
+
+                            <button onClick={() => document.getElementById('my_modal_5').showModal()} className="w-3/4 px-3 py-2 rounded-3xl text-gray-600 btn border-t-green-600 border-b-green-600 border-r-green-600 border-l-green-600">Want To Borrow</button>
+
+
+                            {/* Open the modal using document.getElementById('ID').showModal() method */}
+                            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                                <div className="modal-box">
+                                    <h3 className="font-bold text-lg">Please Fullfill the form</h3>
+                                    <div className="modal-action text-center">
+                                        <form className="card-body">
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text">Email</span>
+                                                </label>
+                                                <input type="email" placeholder="email" className="input input-bordered" required />
+                                            </div>
+                                            <div className="form-control mt-6">
+                                                <button className="w-full px-3 py-2 rounded-3xl text-gray-600 btn border-t-green-600 border-b-green-600 border-r-green-600 border-l-green-600">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
 
                     </div>
@@ -45,7 +70,7 @@ const BookDetails = () => {
                         <p className="text-base text-gray-400">Reading books cultivates knowledge, imagination, empathy, and communication skills. It enhances personal growth, reduces stress, and supports lifelong learning, contributing to intellectual enrichment and societal well-being.So, I suggest to read this book . . . .</p>
                     </div>
                     <div className="my-10">
-                        <h1 className="underline">Book Rating Progress Bar</h1>
+                        <h1 className="text-blue-900">Book Rating Progress Bar</h1>
                         <div>
                             <p className="flex items-center gap-3">5 <FaStar className="text-orange-400"></FaStar> <progress className="progress  progress-info w-56" value="100" max="100"></progress></p>
                         </div>

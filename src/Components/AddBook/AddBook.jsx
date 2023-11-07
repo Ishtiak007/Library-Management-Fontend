@@ -47,7 +47,7 @@ const AddBook = () => {
                     </div>
                 </div>
             </div>
-            <div className="shadow-md bg-gray-100 p-3 rounded-md my-7">
+            <div className="shadow-md  bg-stone-200 p-3 rounded-md my-7">
                 <form onSubmit={handleAddBook}>
                     {/* name and brand row */}
                     <div className="md:flex mb-8">
