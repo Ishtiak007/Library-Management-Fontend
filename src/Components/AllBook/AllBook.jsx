@@ -4,7 +4,6 @@ import AllBookPage from "./AllBookPage";
 
 const AllBook = () => {
     const allBooks = useLoaderData();
-
     return (
         <div>
             <div style={{ '--image-url': 'url(https://i.ibb.co/j8Lj8Px/susan-q-yin-2-JIvbo-GLeho-unsplash-1.jpg)' }}
@@ -20,7 +19,7 @@ const AllBook = () => {
             </div>
             <div className="flex justify-evenly flex-wrap my-4">
                 {
-                    allBooks.map(books => <AllBookPage key={books._is} books={books}></AllBookPage>)
+                    allBooks.map(books => <AllBookPage key={books._id} books={books}></AllBookPage>)
                 }
             </div>
             <div>

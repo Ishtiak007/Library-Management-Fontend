@@ -23,7 +23,6 @@ const BookDetails = () => {
             email, image, bookName, category, returnDate, borrowedDate,
             quantity
         }
-        console.log(borrower);
         fetch('http://localhost:5000/bookBorrower', {
             method: 'POST',
             headers: {
@@ -33,7 +32,6 @@ const BookDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
                         position: 'top-right',
