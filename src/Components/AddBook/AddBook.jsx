@@ -16,7 +16,7 @@ const AddBook = () => {
 
 
         // sending data of book from here
-        fetch('http://localhost:5000/allBooks', {
+        fetch('https://library-management-system-server-seven.vercel.app/allBooks', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

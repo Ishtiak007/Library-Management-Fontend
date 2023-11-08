@@ -48,8 +48,8 @@ const RegisterPage = () => {
                 <div className="mr-12 w-1/2">
                     <img src={img} alt="" />
                 </div>
-                <div className="card  bg-base-100 lg:w-1/2">
-                    <form onSubmit={handleRegister} className='p-5'>
+                <div className="card  bg-base-100 lg:max-w-[500px] max-w-[280px]">
+                    <form onSubmit={handleRegister} className='lg:p-5 p-2'>
                         <div>
                             <p className="py-4 text-center text-xl font-semibold text-blue-900">Register page</p>
                         </div>

@@ -23,7 +23,7 @@ const BookDetails = () => {
             email, image, bookName, category, returnDate, borrowedDate,
             quantity
         }
-        fetch('http://localhost:5000/bookBorrower', {
+        fetch('https://library-management-system-server-seven.vercel.app/bookBorrower', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,7 +64,7 @@ const BookDetails = () => {
 
                             {/* Open the modal using document.getElementById('ID').showModal() method */}
                             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                                <div className="modal-box">
+                                <div className="modal-box max-w-[300px]">
                                     <h3 className="font-bold text-lg">Please Fullfill the form</h3>
                                     <div className="modal-action">
                                         <form onSubmit={handleBorrowedBook} method="dialog" className="card-body">

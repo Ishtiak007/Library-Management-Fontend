@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/allBook',
         element: <PrivateRoutes><AllBook></AllBook></PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/allBooks')
+        loader: () => fetch('https://library-management-system-server-seven.vercel.app/allBooks')
       },
       {
         path: '/borrowedBook',
@@ -63,22 +63,22 @@ const router = createBrowserRouter([
       {
         path: '/updateBook/:id',
         element: <PrivateRoutes><UpdateBook></UpdateBook></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
+        loader: ({ params }) => fetch(`https://library-management-system-server-seven.vercel.app/allBooks/${params.id}`)
       },
       {
         path: '/totalAllBooks/:category',
         element: <PrivateRoutes><TotalAllBooks></TotalAllBooks></PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/allBooks')
+        loader: () => fetch('https://library-management-system-server-seven.vercel.app/allBooks')
       },
       {
         path: '/bookDetails/:id',
         element: <BookDetails></BookDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
+        loader: ({ params }) => fetch(`https://library-management-system-server-seven.vercel.app/allBooks/${params.id}`)
       },
       {
         path: '/readeBook/:id',
         element: <PrivateRoutes><ReadeBook></ReadeBook></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
+        loader: ({ params }) => fetch(`https://library-management-system-server-seven.vercel.app/allBooks/${params.id}`)
       }
     ]
   },

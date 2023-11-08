@@ -9,9 +9,9 @@ import Swal from "sweetalert2";
 const BorrowedBook = () => {
     const [borrowedBook, setBorrowedBook] = useState([]);
     const { user } = useContext(AuthContext)
-    const url = `http://localhost:5000/bookBorrower?email=${user.email}`;
+    const url = `https://library-management-system-server-seven.vercel.app/bookBorrower?email=${user.email}`;
     useEffect(() => {
-        fetch(url)
+        fetch(url, { credentials: 'include' })
             .then(res => res.json())
             .then(data => {
                 setBorrowedBook(data)
@@ -31,7 +31,7 @@ const BorrowedBook = () => {
             confirmButtonText: 'Yes, Return It'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookBorrower/${id}`, {
+                fetch(`https://library-management-system-server-seven.vercel.app/bookBorrower/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
