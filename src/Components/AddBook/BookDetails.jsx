@@ -54,7 +54,9 @@ const BookDetails = () => {
                     </div>
                     <div>
                         <div className="text-center my-4">
-                            <button className="bg-green-700 hover:bg-green-800 btn w-3/4 px-3 py-2 rounded-3xl text-white">Want To Read</button>
+                            <Link to={`/readeBook/${_id}`}>
+                                <button className="bg-green-700 hover:bg-green-800 btn w-3/4 px-3 py-2 rounded-3xl text-white">Want To Read</button>
+                            </Link>
                         </div>
 
                         <div className="text-center">

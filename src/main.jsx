@@ -20,6 +20,7 @@ import TotalAllBooks from './Components/TotalAllBooks/TotalAllBooks.jsx';
 import BookDetails from './Components/AddBook/BookDetails.jsx';
 import AboutUs from './Components/AboutUs/AboutUs.jsx';
 import UpdateBook from './Components/UpdateBook/UpdateBook.jsx';
+import ReadeBook from './Components/AddBook/ReadeBook.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +73,11 @@ const router = createBrowserRouter([
       {
         path: '/bookDetails/:id',
         element: <BookDetails></BookDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
+      },
+      {
+        path: '/readeBook/:id',
+        element: <ReadeBook></ReadeBook>,
         loader: ({ params }) => fetch(`http://localhost:5000/allBooks/${params.id}`)
       }
     ]
