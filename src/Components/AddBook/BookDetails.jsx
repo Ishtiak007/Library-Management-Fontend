@@ -1,10 +1,50 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { BsFillAwardFill } from "react-icons/bs";
 import { FaArrowRight, FaStar } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const BookDetails = () => {
+    const { user } = useContext(AuthContext)
     const singleBooKDetails = useLoaderData();
-    const { _id, image, bookName, author, category, description, rating } = singleBooKDetails;
+    const { _id, image, bookName, author, category, description, rating,
+        quantity } = singleBooKDetails;
+
+    const handleBorrowedBook = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = user?.email;
+        const bookName = form.name.value;
+        const returnDate = form.date.value;
+        const borrowedDate = form.borroweddate.value;
+
+        const borrower = {
+            email, image, bookName, category, returnDate, borrowedDate,
+            quantity
+        }
+        console.log(borrower);
+        fetch('http://localhost:5000/bookBorrower', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(borrower)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top-right',
+                        icon: 'success',
+                        title: 'Your Book added to Borrowed Book Route',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+    }
     return (
         <div>
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
@@ -26,16 +66,40 @@ const BookDetails = () => {
                             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                 <div className="modal-box">
                                     <h3 className="font-bold text-lg">Please Fullfill the form</h3>
-                                    <div className="modal-action text-center">
-                                        <form className="card-body">
+                                    <div className="modal-action">
+                                        <form onSubmit={handleBorrowedBook} method="dialog" className="card-body">
+                                            {/* if there is a button in form, it will close the modal */}
+                                            {/* email */}
                                             <div className="form-control">
                                                 <label className="label">
                                                     <span className="label-text">Email</span>
                                                 </label>
-                                                <input type="email" placeholder="email" className="input input-bordered" required />
+                                                <input defaultValue={user?.email} type="email" placeholder="email" name="email" className="input input-bordered" required />
+                                            </div>
+                                            {/* book name */}
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text">Book Name</span>
+                                                </label>
+                                                <input defaultValue={bookName} name="name" type="text" placeholder="Book name" className="input input-bordered" required />
+                                            </div>
+                                            {/* return date */}
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text">Return Date</span>
+                                                </label>
+                                                <input type="date" name="date" placeholder="Return Date" className="input input-bordered" required />
+                                            </div>
+                                            {/* Borrowed date */}
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text">Borrowed Date</span>
+                                                </label>
+                                                <input type="date" name="borroweddate" placeholder="Borrowed Date" className="input input-bordered" required />
                                             </div>
                                             <div className="form-control mt-6">
                                                 <button className="w-full px-3 py-2 rounded-3xl text-gray-600 btn border-t-green-600 border-b-green-600 border-r-green-600 border-l-green-600">Submit</button>
+                                                <Link to='/borrowedBook'><button className="mt-4 bg-sky-300 w-full px-3 py-2 rounded-3xl text-gray-600 btn border-t-green-600 border-b-green-600 border-r-green-600 border-l-green-600 hover:bg-sky-500">Go To Borrowed Book</button></Link>
                                             </div>
                                         </form>
                                     </div>

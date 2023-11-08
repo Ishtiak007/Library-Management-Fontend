@@ -34,6 +34,7 @@ const AddBook = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    form.reset();
                 }
             })
     }
@@ -49,7 +50,7 @@ const AddBook = () => {
             </div>
             <div className="shadow-md  bg-stone-200 p-3 rounded-md my-7">
                 <form onSubmit={handleAddBook}>
-                    {/* name and brand row */}
+                    {/* image and book name */}
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
 
@@ -64,7 +65,7 @@ const AddBook = () => {
                             </label>
                         </div>
                     </div>
-                    {/* type and price row */}
+                    {/* quantity and author */}
                     <div className="md:flex mb-8 ">
                         <div className="form-control md:w-1/2">
 
@@ -79,7 +80,7 @@ const AddBook = () => {
                             </label>
                         </div>
                     </div>
-                    {/* photo url and rating row */}
+                    {/* category and rating */}
                     <div className="md:flex mb-8 ">
                         <div className="form-control md:w-1/2">
 
@@ -101,7 +102,7 @@ const AddBook = () => {
                             </label>
                         </div>
                     </div>
-                    {/* short description row */}
+                    {/* description row */}
                     <div className=" mb-8">
                         <div className="form-control w-full">
 

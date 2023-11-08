@@ -5,10 +5,10 @@ const BooksCard = ({ data }) => {
     const { _id, image, bookName, author, category } = data;
     return (
         <div>
-            <div className="card lg:card-side lg:w-[600px] bg-base-100 shadow-xl mt-5">
+            <div className="card lg:card-side  lg:w-[600px] bg-base-100 shadow-xl mt-5">
                 <div className='flex-1'>
                     <figure>
-                        <img src={image} alt="Image" className='rounded-xl w-full h-full' />
+                        <img src={image} alt="Image" className='rounded-xl w-full lg:h-[450px]' />
                     </figure>
                 </div>
                 <div className="flex-1 flex justify-start items-center ml-4 p-2">
